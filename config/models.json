@@ -1,0 +1,6 @@
+{
+  "models": [
+    {"id":"core-openai-compatible","provider":"openai-compatible","model":"REPLACE_ME","endpoint":"https://api.example.com/v1/chat/completions","apiKeyEnv":"CORE_LLM_API_KEY","deployment":"cloud","enabled":true,"core":true,"fallbackEligible":false,"rank":1,"capabilities":{"general":1,"reasoning":1,"coding":1},"contextWindow":128000},
+    {"id":"local-fallback","provider":"ollama","model":"gemma3:4b","endpoint":"http://host.docker.internal:11434","deployment":"local","enabled":true,"core":false,"fallbackEligible":true,"rank":0.4,"capabilities":{"general":0.6,"reasoning":0.35,"coding":0.45},"contextWindow":8192}
+  ]
+}
