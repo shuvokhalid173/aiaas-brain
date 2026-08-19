@@ -1,0 +1,14 @@
+services:
+  brain:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      HOST: 0.0.0.0
+      MODEL_REGISTRY_PATH: /app/config/models.json
+      CORE_LLM_MODEL_ID: core-openai-compatible
+      CORE_LLM_API_KEY: ${CORE_LLM_API_KEY:-}
+      REQUEST_TIMEOUT_MS: 30000
+    volumes:
+      - ./config:/app/config:ro
