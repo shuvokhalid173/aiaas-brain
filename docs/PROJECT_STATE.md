@@ -79,6 +79,7 @@ There is no LLM-powered Fast Router. If Core fails, the availability policy bypa
 - Metrics/tracing are not yet exported to an observability backend.
 - Core structured output parsing currently expects JSON content directly; tolerant fenced-JSON parsing can be added.
 - Model selection should eventually incorporate token/context constraints and richer latency/cost policies.
+- CI execution was not observed through the GitHub connector for the current head; local/toolchain validation is the next gate before merge.
 
 ## Reference-Service Standard
 
@@ -86,10 +87,14 @@ Future AIaaS microservices should use this project as the architectural referenc
 
 ## Next Milestone
 
-Run the full toolchain against the branch, fix compile/test issues, lock dependencies, add contract/resilience tests, and then merge the v0.1 runtime into `main` after review.
+Run the full toolchain against the branch, fix compile/test issues, lock dependencies, add contract/resilience tests, then merge the v0.1 runtime into `main` after review.
 
 ## Change Log
 
 ### Runtime MVP
 
 Implemented the first executable Brain runtime and supporting deployment/developer infrastructure on `feat/v0.1-runtime`.
+
+### Documentation contract
+
+Established the developer manual, contributor rules, HLD/LLD, API contract, model registry semantics, ADRs, and living project-state process.
